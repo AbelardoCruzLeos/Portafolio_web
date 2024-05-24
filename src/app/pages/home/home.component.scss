@@ -8,4 +8,26 @@
     width: 24px; /* Ajusta el tamaño según tus necesidades */
     height: 24px; /* Ajusta el tamaño según tus necesidades */
   }
+
+  .tamano {
+    width: 32%;
+  }
   
+  @media (max-width: 768px) {
+    .tamano {
+      width: 100%;
+    }
+  }
+  
+.textcenter {
+    text-align: center;
+    width: 70%;
+    font-size: 25px;
+}
+
+
+
+.fondo {
+    background-image: url("https://wallpapers.com/images/hd/red-color-background-x82wfzlnlf96tvcn.jpg");
+    background-size: cover;
+}
