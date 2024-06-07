@@ -1,4 +1,126 @@
-.hola {
-    background: rgba(255, 122, 89, .5);
-    background-repeat: repeat;
+@font-face {
+  font-family: 'DeadPool';
+  src: url('../../../assets/fonts/roguehero.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../../../assets/fonts/Miracode.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.hola {
+  background: rgba(255, 122, 89, .5);
+  background-repeat: repeat;
+}
+
+/* Define the size for the button images */
+.button-img {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: 50px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.tamano {
+  width: 32%;
+}
+
+@media (max-width: 768px) {
+  .tamano {
+    width: 100%;
+  }
+}
+
+.textcenter {
+  text-align: center;
+  width: 70%;
+  font-size: 25px;
+  font-family: 'DeadPool', sans-serif;
+}
+
+.Minecraft {
+  font-family: 'Minecraft', sans-serif;
+}
+
+
+.fondo {
+  background-image: url("https://wallpapers.com/images/hd/red-color-background-x82wfzlnlf96tvcn.jpg");
+  background-size: cover;
+}
+
+.lang-icon {
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
+}
+
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.Seccion_Inicio {
+  background-image: url("https://wallpapers.com/images/hd/red-color-background-x82wfzlnlf96tvcn.jpg");
+  background-size: cover; /* Cambiado a cover para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  height: 100vh; /* Cambiado a 100vh para ocupar toda la altura de la pantalla */
+  overflow-y: auto; /* Agregado para permitir desplazamiento vertical si el contenido excede la altura de la pantalla */
+}
+
+
+.separador {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220926/pngtree-download-wallpapers-red-abstract-background-lines-wallpaper-image_1465946.jpg");
+  height: 25px;
+}
+
+
+.botonesSociales {
+  padding-bottom: -900px;
+}
+
