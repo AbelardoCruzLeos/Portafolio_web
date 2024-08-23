@@ -1,1 +1,75 @@
-<p>contactame works!</p>
+<div class="container mx-auto p-8 max-w-md bg-white shadow-lg rounded-lg">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Contáctame</h2>
+    <p class="text-center text-gray-600 mb-6">Completa tu información</p>
+    <form>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700" for="nombre">Nombre</label>
+          <input
+            class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+            id="nombre"
+            type="text"
+            placeholder="por ejemplo, Juan">
+        </div>
+  
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700" for="apellido">Apellido</label>
+          <input
+            class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+            id="apellido"
+            type="text"
+            placeholder="p. ej., Conte">
+        </div>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700" for="email">Email *</label>
+        <input
+          class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+          id="email"
+          type="email"
+          placeholder="p. ej., email@ejemplo.com">
+      </div>
+  
+      <div class="grid grid-cols-2 gap-4">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700" for="Genero">Genero</label>
+          <select
+            class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+            id="Genero">
+            <option>Select</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select>
+        </div>
+  
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700" for="telefono">Teléfono</label>
+          <input
+            class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+            id="telefono"
+            type="text"
+            placeholder="p. ej., 555-555-555">
+        </div>
+      </div>
+  
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700" for="empresa">Razon</label>
+        <input
+          class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-orange-300"
+          id="empresa"
+          type="text"
+          placeholder="Ingresa el nombre de tu compañía">
+      </div>
+  
+      <button
+      class="w-full py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md focus:outline-none focus:ring focus:border-red-300">
+      Enviar
+    </button>
+    
+    </form>
+    <p class="text-center text-gray-500 text-xs mt-4">
+      Gracias por contactarte
+    </p>
+  </div>
+  
