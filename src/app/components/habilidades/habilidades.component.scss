@@ -1,0 +1,60 @@
+.skills-strengths-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  }
+  
+  .skills-section, .strengths-section {
+    flex: 1;
+    min-width: 300px; /* Ensure minimum width for readability */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .skills-container, .strengths-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .skills-category, .strength {
+    margin-bottom: 20px;
+  }
+  
+  .skills-category-title, .strength-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .skill, .strength {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skill-name, .strength-name {
+    margin-bottom: 5px;
+  }
+  
+  .skill-progress, .strength-progress {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #f50c0c, #f5e90c, #0cf52d); /* Gradient from red to yellow to green */
+    border-radius: 8px;
+  }
+  

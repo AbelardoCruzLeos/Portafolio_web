@@ -1,135 +1,149 @@
-<div class="container mx-auto">
-  <div class="container mx-auto">
-
-    <div class="h-screen">
-      <section class="seccion_i">
-        <div class="flex flex-col items-center">
-          <div class="w-full md:w-1/3 mb-3">
-            <div class="flex justify-center flex-row mt-5 px-5 space-x-2">
-              <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 w-1/2 bg-black text-white flex justify-center items-center">
-                <img class="w-6 h-6" src="https://images.vexels.com/media/users/3/223136/isolated/preview/984f500cf9de4519b02b354346eb72e0-icono-de-facebook-redes-sociales.png" alt="Facebook" />
-              </a>
-              <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 w-1/2 bg-black text-white flex justify-center items-center">
-                <img class="w-6 h-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" />
-              </a>
-              <a href="https://www.youtube.com/@brocurly/featured" target="_blank" class="p-1 w-1/2 bg-white text-black flex justify-center items-center">
-                <img class="w-6 h-6" src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" alt="YouTube" />
-              </a>
-              <a href="https://github.com/Umblum12" target="_blank" class="p-1 w-1/2 bg-white text-black flex justify-center items-center">
-                <img class="w-6 h-6" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
-              </a>
-            </div>
+<div class="w-screen h-screen overflow-hidden">
+  <section class="seccion_i w-full h-full p-4" style="background-image: url(../../../assets/banner-background-resized.png); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="flex flex-col md:flex-row items-center justify-between w-full h-full">
+      <!-- Contenedor Izquierdo -->
+      <div class="flex flex-col items-center w-full md:w-1/3 mb-6 md:mb-0">
+        <div class="mb-3 w-full">
+          <div class="flex justify-between mb-4 w-full">
+            <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 bg-black text-white flex justify-center items-center w-1/4">
+              <img class="w-6 h-6" src="https://images.vexels.com/media/users/3/223136/isolated/preview/984f500cf9de4519b02b354346eb72e0-icono-de-facebook-redes-sociales.png" alt="Facebook" />
+            </a>
+            <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 bg-black text-white flex justify-center items-center w-1/4">
+              <img class="w-6 h-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com/@brocurly/featured" target="_blank" class="p-1 bg-white text-black flex justify-center items-center w-1/4">
+              <img class="w-6 h-6" src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" alt="YouTube" />
+            </a>
+            <a href="https://github.com/Umblum12" target="_blank" class="p-1 bg-white text-black flex justify-center items-center w-1/4">
+              <img class="w-6 h-6" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+            </a>
           </div>
-
-          <div class="flex flex-row px-5">
-            <div class="w-full md:w-1/3 mb-4">
-              <img class="rounded-lg" src="https://avatars.githubusercontent.com/u/68798247?v=4" alt="Foto de perfil de Abelardo Cruz Leos" />
-            </div>
-            <div class="text-center">
-              <h1 class="text-blue-500">Abelardo Cruz Leos</h1>
-              <h2 class="card-text">Ingeniería:</h2>
-              <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=75" class="card-text" target="_blank">Ingeniería en Desarrollo y Gestión de Software</a>
-              <h2 class="card-text">Técnico Superior Universitario:</h2>
-              <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=73" class="card-text" target="_blank">Tecnologías de la Información: Área Desarrollo de Software Multiplataforma</a>
-            </div>
-          </div>
+          <img class="rounded-lg w-full" src="https://avatars.githubusercontent.com/u/68798247?v=4" alt="Foto de perfil de Abelardo Cruz Leos" />
         </div>
-      </section>
-
-      <section class="pb-4">
-        <div class="separador"></div>
-      </section>
+      </div>
+      <!-- Contenedor Derecho -->
+      <div class="text-center w-full md:w-2/3">
+        <h1 class="text-blue-500 text-2xl md:text-3xl">Abelardo Cruz Leos</h1>
+        <h2 class="card-text mt-4">{{ 'PROFILE.ENGINEERING' | translate }}:</h2>
+        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=75" class="card-text text-blue-500" target="_blank">{{ 'PROFILE.SOFTWARE_ENGINEERING' | translate }}</a>
+        <h2 class="card-text mt-4">{{ 'PROFILE.TECH_UNIVERSITY' | translate }}:</h2>
+        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=73" class="card-text text-blue-500" target="_blank">{{ 'PROFILE.IT_TECHNOLOGY' | translate }}</a>
+      </div>
     </div>
-
-    <section class="text-center mb-4">
-      <div class="flex justify-center space-x-2">
-        <button class="btn btn-primary btn-outline-danger mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cambiarSeccion('proyectos')">
-          Proyectos
-        </button>
-        <button class="btn btn-secondary btn-outline-danger mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cambiarSeccion('repositorios')">
-          Repositorios
-        </button>
-        <button class="btn btn-success btn-outline-danger mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cambiarSeccion('juegos')">
-          Juegos
-        </button>
-      </div>
-    </section>
-
-    <section class="pb-4" *ngIf="seccionActiva == 'proyectos'">
-      <div class="flex flex-wrap -mx-2">
-        <div *ngFor="let proyecto of proyectos" class="w-full md:w-1/3 mb-4 px-2">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img [src]="proyecto.Image_Url" class="w-full" alt="{{ proyecto.Nombre }}" />
-            <div class="p-4">
-              <h5 class="text-lg font-bold">{{ proyecto.Nombre }}</h5>
-              <p class="text-gray-700">Participantes: {{ proyecto.Participantes }}</p>
-              <p class="text-gray-700">
-                Tecnologías:
-                <ng-container *ngFor="let lenguaje of proyecto.Lenguajes">
-                  <span>{{ lenguaje.Nombre }}</span>
-                  <img [src]="lenguaje.imageUrl" alt="{{ lenguaje.Nombre }}" class="inline-block h-12 w-auto" />
-                </ng-container>
-              </p>
-              <a [href]="proyecto.Page_Url" class="btn btn-primary" target="_blank">Ver Proyecto</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div></div>
-    </section>
-
-    <section class="pb-4" *ngIf="seccionActiva == 'repositorios'">
-      <div class="flex flex-wrap -mx-2">
-        <div *ngFor="let repo of reposPorPage[currentPage - 1]" class="w-full md:w-1/3 mb-4 px-2">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h5 class="text-lg font-bold">{{ repo.name }}</h5>
-              <hr class="my-2">
-              <p class="text-gray-700">{{ repo.description }}</p>
-              <p class="text-gray-700">
-                Language:
-                <ng-container *ngIf="repo.language">
-                  <img [src]="getLanguageIconUrl(repo.language)" alt="{{ repo.language }}" class="inline-block h-6 w-auto" />
-                </ng-container>
-                {{ repo.language }}
-              </p>
-              <hr class="my-2">
-              <a [href]="repo.html_url" class="btn btn-primary" target="_blank">Ver Repositorio</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination flex justify-center space-x-2">
-          <li class="page-item" [class.disabled]="currentPage === 1">
-            <a class="page-link" href="#" (click)="onPageChange(currentPage - 1)" tabindex="-1">Anterior</a>
-          </li>
-          <li class="page-item" *ngFor="let page of getPagesArray()" [class.active]="currentPage === page">
-            <a class="page-link" href="#" (click)="onPageChange(page)">{{ page }}</a>
-          </li>
-          <li class="page-item" [class.disabled]="currentPage === TotalPages">
-            <a class="page-link" href="#" (click)="onPageChange(currentPage + 1)">Siguiente</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-
-    <section class="pb-4" *ngIf="seccionActiva == 'juegos'">
-      <div class="flex flex-wrap -mx-2">
-        <div class="w-full md:w-1/3 mb-4 px-2">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h5 class="text-lg font-bold">TheGGGame</h5>
-              <hr class="my-2">
-              <p class="text-gray-700">Este es un juego shooter en 3ra y 1ra persona y de mundo abierto.</p>
-              <hr class="my-2">
-              <a [href]="" class="btn btn-primary" target="_blank">Ver Juego</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+  </section>
+  <section class="pb-4">
+    <div class="separador"></div>
+  </section>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="profile-container">
+  <!-- Otros contenidos del perfil -->
+  
+  <app-habilidades></app-habilidades>
+  
+  <!-- Otros contenidos del perfil -->
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="text-center mb-4">
+  <div class="flex justify-center flex-wrap space-x-2">
+    <button class="btn btn-primary mx-2 mb-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="cambiarSeccion('proyectos')">
+      {{ 'BUTTONS.PROJECTS' | translate }}
+    </button>
+    <button class="btn btn-secondary mx-2 mb-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="cambiarSeccion('repositorios')">
+      {{ 'BUTTONS.REPOSITORIES' | translate }}
+    </button>
+    <button class="btn btn-success mx-2 mb-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="cambiarSeccion('juegos')">
+      {{ 'BUTTONS.GAMES' | translate }}
+    </button>
+  </div>
+</section>
+
+<section class="pb-4" *ngIf="seccionActiva == 'proyectos'">
+  <div class="flex flex-wrap -mx-2">
+    <div *ngFor="let proyecto of proyectos" class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img [src]="proyecto.Image_Url" class="w-full" alt="{{ proyecto.Nombre }}" />
+        <div class="p-4">
+          <h5 class="text-lg font-bold">{{ proyecto.Nombre }}</h5>
+          <p class="text-gray-700">{{ 'PROFILE.PARTICIPANTS' | translate }}: {{ proyecto.Participantes }}</p>
+          <p class="text-gray-700">
+            {{ 'PROFILE.TECHNOLOGIES' | translate }}:
+            <ng-container *ngFor="let lenguaje of proyecto.Lenguajes">
+              <span>{{ lenguaje.Nombre }}</span>
+              <img [src]="lenguaje.imageUrl" alt="{{ lenguaje.Nombre }}" class="inline-block h-12 w-auto" />
+            </ng-container>
+          </p>
+          <br>
+          <div class="flex justify-center">
+            <a [href]="proyecto.Page_Url" class="btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" target="_blank">{{ 'VIEW_PROJECT' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section #reposSection class="pb-4" *ngIf="seccionActiva == 'repositorios'">
+  <div class="flex flex-wrap -mx-2">
+    <div *ngFor="let repo of reposPorPage[currentPage - 1]" class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-4">
+          <h5 class="text-lg font-bold">{{ repo.name }}</h5>
+          <hr class="my-2">
+          <p class="text-gray-700">{{ repo.description }}</p>
+          <p class="text-gray-700">
+            {{ 'REPOSITORY.LANGUAGE' | translate }}:
+            <ng-container *ngIf="repo.language">
+              <img [src]="getLanguageIconUrl(repo.language)" alt="{{ repo.language }}" class="inline-block h-6 w-auto" />
+            </ng-container>
+            {{ repo.language }}
+          </p>
+          <hr class="my-2">
+          <div class="flex justify-center">
+            <a [href]="repo.html_url" class="btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" target="_blank">{{ 'VIEW_REPOSITORY' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination flex justify-center space-x-2">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" href="#reposSection" (click)="onPageChange($event, currentPage - 1)" [attr.disabled]="currentPage === 1 ? true : null">{{ 'NAVIGATION.PREVIOUS' | translate }}</a>
+      </li>
+      <li class="page-item" *ngFor="let page of getPagesArray()" [class.active]="currentPage === page">
+        <a class="page-link btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" href="#reposSection" (click)="onPageChange($event, page)">{{ page }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === TotalPages">
+        <a class="page-link btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" href="#reposSection" (click)="onPageChange($event, currentPage + 1)" [attr.disabled]="currentPage === TotalPages ? true : null">{{ 'NAVIGATION.NEXT' | translate }}</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<section class="pb-4" *ngIf="seccionActiva == 'juegos'">
+  <div class="flex flex-wrap -mx-2">
+    <div class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-4">
+          <h5 class="text-lg font-bold">{{ 'GAME.TITLE' | translate }}</h5>
+          <hr class="my-2">
+          <p class="text-gray-700">{{ 'GAME.DESCRIPTION' | translate }}</p>
+          <hr class="my-2">
+          <div class="flex justify-center">
+            <a [href]="" class="btn btn-success mx-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" target="_blank">{{ 'VIEW_GAME' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

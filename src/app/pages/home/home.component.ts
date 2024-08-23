@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ProyectosService } from '../../services/proyectos.service';
 import { GithubService } from '../../services/github.service';
 import { CommonModule } from '@angular/common';
-
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { HabilidadesComponent } from '../../components/habilidades/habilidades.component';
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule, HabilidadesComponent],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('reposSection') reposSection!: ElementRef;
+
   seccionActiva: string = 'proyectos';
   proyectos: any[] = [];
   repos: any[] = [];
@@ -23,7 +26,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private proyectosService: ProyectosService,
-    private githubService: GithubService
+    private githubService: GithubService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
@@ -78,20 +82,26 @@ export class HomeComponent implements OnInit {
     this.seccionActiva = seccion;
 
     // Recargar los datos si la sección activa es 'proyectos'
-    if (seccion === 'proyectos' && this.proyectos.length === 0) {
+    if (seccion === 'proyectos') {
       this.cargarProyectos();
     }
     // Recargar los datos si la sección activa es 'repositorios'
-    if (seccion === 'repositorios' && this.repos.length === 0) {
+    if (seccion === 'repositorios') {
       this.cargarRepositorios();
     }
   }
 
-  onPageChange(pageNumber: number): void {
+  onPageChange(event: Event, pageNumber: number): void {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
     if (pageNumber < 1 || pageNumber > this.TotalPages) {
       return; // Evitar cargar páginas inválidas
     }
     this.currentPage = pageNumber;
+
+    // Desplazarse a la sección de repositorios
+    if (this.reposSection) {
+      this.reposSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   getPagesArray(): number[] {

@@ -1,0 +1,23 @@
+<div class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-button" (click)="closeModal()">×</button>
+      <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div *ngIf="gameStarted" class="score">Score: {{ score }}</div>
+        <div *ngIf="!gameStarted" class="start-container">
+          <input type="text" [(ngModel)]="playerName" placeholder="Enter your name" class="name-input" />
+          <button (click)="startGame()" class="game-button">Play</button>
+        </div>
+        <button *ngIf="gameStarted" (click)="resetGame()" class="game-button">Volver a jugar</button>
+      </div>
+    </div>
+  
+    <div *ngIf="gameOver" class="game-over-alert">
+      <div class="game-over-content">
+        <p>Game Over, {{ playerName }}</p>
+        <p>Score: {{ score }}</p>
+        <button (click)="resetGame()" class="game-button">Volver a jugar</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,1 +1,22 @@
-<p>games works!</p>
+<div class="games-container">
+    <h2 class="section-title">{{ 'PROFILE.GAMES' | translate }}</h2>
+    <div class="games-list">
+      <div class="game-card" *ngFor="let game of games">
+        <img [src]="game.image" alt="{{ game.name }}" class="game-image">
+        <div class="game-details">
+          <h3 class="game-name">{{ game.name }}</h3>
+          <p class="game-description">{{ game.description }}</p>
+          <button (click)="openGame(game)" class="play-button">Jugar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div *ngIf="currentGame && currentGame.name === 'La Vibora'" class="modal-overlay">
+    <div class="modal-content">
+      <app-vibora (close)="closeModal()"></app-vibora>
+      <button (click)="closeModal()" class="game-button">Cerrar</button>
+    </div>
+  </div>
+  

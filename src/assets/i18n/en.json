@@ -1,0 +1,57 @@
+{
+  "NAVBAR": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "GAMES": "Games",
+    "ABOUTME": "About Me",
+    "CONTACT": "Contact",
+    "LANGUAGE": "Language",
+    "ENGLISH": "English (US)",
+    "GERMAN": "German",
+    "ITALIAN": "Italian",
+    "CHINESE": "Chinese (Traditional)",
+    "SPANISH": "Spanish (Mexico)"
+  },
+  "PROFILE": {
+    "ENGINEERING": "Engineering",
+    "SOFTWARE_ENGINEERING": "Software Engineering",
+    "TECH_UNIVERSITY": "Technical University",
+    "IT_TECHNOLOGY": "Information Technology: Area of Multiplatform Software Development",
+    "PARTICIPANTS": "Participants",
+    "TECHNOLOGIES": "Technologies",
+    "LANGUAGE": "Language",
+    "SKILLS": "Skills",
+    "STRENGTHS": "Strengths"
+  },
+  "BUTTONS": {
+    "PROJECTS": "Projects",
+    "REPOSITORIES": "Repositories",
+    "GAMES": "Games"
+  },
+  "NAVIGATION": {
+    "PREVIOUS": "Previous",
+    "NEXT": "Next"
+  },
+  "VIEW_PROJECT": "View Project",
+  "VIEW_REPOSITORY": "View Repository",
+  "VIEW_GAME": "View Game",
+  "GAME": {
+    "TITLE": "TheGGGame",
+    "DESCRIPTION": "This is a third and first person shooter game with an open world."
+  },
+  "REPOSITORY": {
+    "LANGUAGE": "programming language:"
+  },
+  "Titulo": {
+    "Nombre": "Abelardo Cruz Leos"
+  },
+  "FOOTER": {
+    "BRAND": "Innotech",
+    "RESOURCES": "Resources",
+    "FOLLOW": "Follow me",
+    "LEGAL": "Legal",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "TERMS_CONDITIONS": "Terms & Conditions",
+    "ALL_RIGHTS_RESERVED": "All Rights Reserved"
+  }
+}

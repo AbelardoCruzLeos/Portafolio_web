@@ -1,0 +1,33 @@
+<div class="skills-strengths-container">
+    <div class="skills-section">
+      <h2 class="section-title">{{ 'PROFILE.SKILLS' | translate }}</h2>
+      <div class="skills-container">
+        <div class="skills-category" *ngFor="let type of ['Front-End', 'Back-End']">
+          <h3 class="skills-category-title">{{ type }}</h3>
+          <div class="skill" *ngFor="let skill of getSkillsByType(type)">
+            <div class="skill-name">
+              <strong>{{ skill.name }}</strong>: {{ skill.level }}
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar" [style.width.%]="skill.progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="strengths-section">
+      <h2 class="section-title">{{ 'PROFILE.STRENGTHS' | translate }}</h2>
+      <div class="strengths-container">
+        <div class="strength" *ngFor="let strength of strengths">
+          <div class="strength-name">
+            <strong>{{ strength.name }}</strong>: {{ strength.description }}
+          </div>
+          <div class="strength-progress">
+            <div class="progress-bar" [style.width.%]="strength.progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

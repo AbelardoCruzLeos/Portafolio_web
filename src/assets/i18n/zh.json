@@ -1,0 +1,49 @@
+{
+  "NAVBAR": {
+    "HOME": "首页",
+    "ABOUT": "关于",
+    "GAMES": "游戏",
+    "ABOUTME": "关于我",
+    "CONTACT": "联系",
+    "LANGUAGE": "语言"
+  },
+  "PROFILE": {
+    "ENGINEERING": "工程",
+    "SOFTWARE_ENGINEERING": "软件工程",
+    "TECH_UNIVERSITY": "南索诺拉技术大学",
+    "IT_TECHNOLOGY": "信息技术",
+    "PARTICIPANTS": "参与者",
+    "TECHNOLOGIES": "技术"
+  },
+  "BUTTONS": {
+    "PROJECTS": "项目",
+    "REPOSITORIES": "仓库",
+    "GAMES": "游戏"
+  },
+  "VIEW_PROJECT": "查看项目",
+  "VIEW_REPOSITORY": "查看仓库",
+  "VIEW_GAME": "查看游戏",
+  "NAVIGATION": {
+    "PREVIOUS": "上一页",
+    "NEXT": "下一页"
+  },
+  "GAME": {
+    "TITLE": "游戏标题",
+    "DESCRIPTION": "游戏描述"
+  },
+  "REPOSITORY": {
+    "LANGUAGE": "编程语言："
+  },
+  "Titulo": {
+    "Nombre": "Abelardo Cruz Leos"
+  },
+  "FOOTER": {
+    "BRAND": "Innotech",
+    "RESOURCES": "资源",
+    "FOLLOW": "关注我",
+    "LEGAL": "法律",
+    "PRIVACY_POLICY": "隐私政策",
+    "TERMS_CONDITIONS": "条款和条件",
+    "ALL_RIGHTS_RESERVED": "版权所有"
+  }
+}

@@ -1,0 +1,70 @@
+.modal-overlay {
+    @apply fixed inset-0 flex justify-center items-center bg-black bg-opacity-50;
+  }
+  
+  .modal-content {
+    @apply relative bg-white p-6 rounded-lg shadow-lg;
+  }
+  
+  .close-button {
+    @apply absolute top-2 right-2 text-gray-500 text-2xl;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    @apply text-gray-700;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  canvas {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  
+  .score {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .name-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .game-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .game-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .game-over-alert {
+    @apply fixed inset-0 flex justify-center items-center bg-black bg-opacity-50;
+  }
+  
+  .game-over-content {
+    @apply bg-white p-6 rounded-lg shadow-lg text-center;
+  }
+  
