@@ -4,6 +4,8 @@ import { GithubService } from '../../services/github.service';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { HabilidadesComponent } from '../../components/habilidades/habilidades.component';
+import { DomSanitizer } from '@angular/platform-browser'; // Import para sanitizar URLs
+
 @Component({
   standalone: true,
   imports: [CommonModule, TranslateModule, HabilidadesComponent],
@@ -23,16 +25,21 @@ export class HomeComponent implements OnInit {
   pagesArray: number[] = [];
   TotalRepos: number = 0;
   TotalPages: number = 0;
+  private reposLoaded: boolean = false;
+
+  certificados: any[] = [];
 
   constructor(
     private proyectosService: ProyectosService,
     private githubService: GithubService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private sanitizer: DomSanitizer // Para sanitizar las URLs
   ) {}
 
   ngOnInit(): void {
     this.cargarProyectos();
     this.cargarRepositorios();
+    this.cargarCertificados(); // Cargar certificados al iniciar
   }
 
   cargarProyectos(): void {
@@ -55,19 +62,21 @@ export class HomeComponent implements OnInit {
   }
 
   cargarRepositorios(): void {
-    this.githubService.getAllRepos().subscribe(
-      (repos) => {
-        this.repos = repos;
-        this.TotalRepos = repos.length;
-        this.TotalPages = Math.ceil(this.TotalRepos / this.reposPerPage);
-        this.pagesArray = this.getPagesArray();
-
-        this.reposPorPage = this.divideArrayInChunks(repos, this.reposPerPage);
-      }, 
-      (error) => {
-        console.error('Error al obtener repositorios:', error);
-      }
-    );
+    if (!this.reposLoaded) {
+      this.githubService.getAllRepos().subscribe(
+        (repos) => {
+          this.repos = repos;
+          this.TotalRepos = repos.length;
+          this.TotalPages = Math.ceil(this.TotalRepos / this.reposPerPage);
+          this.pagesArray = this.getPagesArray();
+          this.reposPorPage = this.divideArrayInChunks(repos, this.reposPerPage);
+          this.reposLoaded = true; // Marcar como cargados
+        },
+        (error) => {
+          console.error('Error al obtener repositorios:', error);
+        }
+      );
+    }
   }
 
   divideArrayInChunks(array: any[], chunkSize: number): any[][] {
@@ -92,16 +101,18 @@ export class HomeComponent implements OnInit {
   }
 
   onPageChange(event: Event, pageNumber: number): void {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+    event.preventDefault(); 
     if (pageNumber < 1 || pageNumber > this.TotalPages) {
-      return; // Evitar cargar páginas inválidas
+      return;
     }
     this.currentPage = pageNumber;
-
-    // Desplazarse a la sección de repositorios
-    if (this.reposSection) {
-      this.reposSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    
+    // Usar setTimeout para asegurarse de que el DOM ha terminado de actualizar
+    setTimeout(() => {
+      if (this.reposSection) {
+        this.reposSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   }
 
   getPagesArray(): number[] {
@@ -123,5 +134,17 @@ export class HomeComponent implements OnInit {
       default:
         return 'URL_DEL_ICONO_POR_DEFECTO'; // URL de un icono por defecto si el lenguaje no tiene un icono específico
     }
+  }
+
+  // Función para cargar certificados
+  cargarCertificados(): void {
+    this.certificados = [
+      {
+        nombre: 'Build an app with ASPNET Core and Angular from scratch',
+        imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-2d4fc0d1-c8d0-4cc9-9d45-48a4c7ffde32.jpg',  // Link to the image
+        pdfUrl: this.sanitizer.bypassSecurityTrustResourceUrl('https://udemy-certificate.s3.amazonaws.com/pdf/UC-2d4fc0d1-c8d0-4cc9-9d45-48a4c7ffde32.pdf')  // Link to the full PDF
+      }
+      // Add more certificates here if needed
+    ];
   }
 }
