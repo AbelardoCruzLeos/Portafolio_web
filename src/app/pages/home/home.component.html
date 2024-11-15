@@ -1,4 +1,4 @@
-<div class="w-screen h-screen overflow-hidden">
+<div class="h-screen overflow-hidden">
   <section class="seccion_i w-full h-full p-4" style="background-image: url(../../../assets/Background_ACL.webp); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="flex flex-col md:flex-row items-center justify-between w-full h-full">
       <!-- Contenedor Izquierdo -->
@@ -8,10 +8,10 @@
             <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 bg-black text-white flex justify-center items-center w-1/4">
               <img class="w-6 h-6" src="https://images.vexels.com/media/users/3/223136/isolated/preview/984f500cf9de4519b02b354346eb72e0-icono-de-facebook-redes-sociales.png" alt="Facebook" />
             </a>
-            <a href="https://www.facebook.com/abelardo.cruz.7737" target="_blank" class="p-1 bg-black text-white flex justify-center items-center w-1/4">
-              <img class="w-6 h-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram" />
+            <a href="https://www.linkedin.com/in/abelardo-cruz-leos-a6a33b290/" target="_blank" class="p-1 bg-black text-white flex justify-center items-center w-1/4">
+              <img class="w-6 h-6" src="https://cdn-icons-png.freepik.com/256/1377/1377213.png?semt=ais_hybrid" alt="Instagram" />
             </a>
-            <a href="https://www.youtube.com/@brocurly/featured" target="_blank" class="p-1 bg-white text-black flex justify-center items-center w-1/4">
+            <a href="https://www.youtube.com/@abelardocruzleos781" target="_blank" class="p-1 bg-white text-black flex justify-center items-center w-1/4">
               <img class="w-6 h-6" src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" alt="YouTube" />
             </a>
             <a href="https://github.com/Umblum12" target="_blank" class="p-1 bg-white text-black flex justify-center items-center w-1/4">
@@ -23,11 +23,11 @@
       </div>
       <!-- Contenedor Derecho -->
       <div class="text-center w-full md:w-2/3">
-        <h1 class="text-blue-500 text-2xl md:text-3xl">Abelardo Cruz Leos</h1>
-        <h2 class="card-text mt-4">{{ 'PROFILE.ENGINEERING' | translate }}:</h2>
-        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=75" class="card-text text-blue-500" target="_blank">{{ 'PROFILE.SOFTWARE_ENGINEERING' | translate }}</a>
-        <h2 class="card-text mt-4">{{ 'PROFILE.TECH_UNIVERSITY' | translate }}:</h2>
-        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=73" class="card-text text-blue-500" target="_blank">{{ 'PROFILE.IT_TECHNOLOGY' | translate }}</a>
+        <h1 class="text-blue-500 text-2xl md:text-3xl fuente-deadpool">Abelardo Cruz Leos</h1>
+        <h2 class="card-text mt-4 fuente-minecraftlogo">{{ 'PROFILE.ENGINEERING' | translate }}:</h2>
+        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=75" class="card-text text-blue-500 fuente-minecraftletras" target="_blank">{{ 'PROFILE.SOFTWARE_ENGINEERING' | translate }}</a>
+        <h2 class="card-text mt-4 fuente-minecraftlogo">{{ 'PROFILE.TECH_UNIVERSITY' | translate }}:</h2>
+        <a href="https://uts.sonora.edu.mx/index.php?option=com_sppagebuilder&view=page&id=73" class="card-text text-blue-500 fuente-minecraftletras" target="_blank">{{ 'PROFILE.IT_TECHNOLOGY' | translate }}</a>
       </div>
     </div>
   </section>
@@ -67,7 +67,7 @@
 </section>
 
 <section class="pb-4" *ngIf="seccionActiva == 'proyectos'">
-  <div class="flex flex-wrap -mx-2">
+  <div class="flex flex-wrap ">
     <div *ngFor="let proyecto of proyectos" class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <img [src]="proyecto.Image_Url" class="w-full" alt="{{ proyecto.Nombre }}" />
@@ -92,7 +92,7 @@
 </section>
 
 <section #reposSection class="pb-4" *ngIf="seccionActiva == 'repositorios'">
-  <div class="flex flex-wrap -mx-2">
+  <div class="flex flex-wrap">
     <div *ngFor="let repo of reposPorPage[currentPage - 1]" class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="p-4">
@@ -131,7 +131,7 @@
 </section>
 
 <section class="pb-4" *ngIf="seccionActiva == 'juegos'">
-  <div class="flex flex-wrap -mx-2">
+  <div class="flex flex-wrap">
     <div class="w-full md:w-1/2 lg:w-1/3 mb-4 px-2">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="p-4">

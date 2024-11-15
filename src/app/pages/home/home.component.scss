@@ -3,11 +3,19 @@
   src: url('../../../assets/fonts/roguehero.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  border: 1px solid black;
 }
 
 @font-face {
   font-family: 'Minecraft';
   src: url('../../../assets/fonts/Miracode.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinecraftLogo';
+  src: url('../../../assets/fonts/MINECRAFT\ PE.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -139,7 +147,6 @@
 }
 
 .seccion_i {
-  background-image: url(../../../assets/banner-background-resized.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -185,4 +192,30 @@ html, body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+}
+
+.fuente-deadpool{
+  font-family: 'DeadPool', sans-serif;
+  color: red;
+  //poner un borde al texto
+  border: 1px solid black;
+  //poner un padding al texto
+  //poner un margen al texto
+  margin-left: 450px;
+  margin-right: 450px;
+  //poner un borde redondeado al texto
+  border-radius: 10px;
+  //poner una sombra al texto
+  box-shadow: 5px 5px 5px black;
+}
+
+.fuente-minecraftletras{
+  font-family: 'Minecraft', sans-serif;
+  font-size: 15px;
+}
+
+.fuente-minecraftlogo{
+  font-family: 'MinecraftLogo', sans-serif;
+  color: black;
+  font-size: 25px;
 }
