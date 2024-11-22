@@ -1,0 +1,18 @@
+<div class="modal modal-open">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Vista previa del PDF</h3>
+  
+      <!-- Cargar PDF -->
+      <div *ngIf="loading" class="text-center">
+        <p>Cargando el PDF...</p>
+      </div>
+  
+      <!-- Canvas para mostrar el PDF -->
+      <canvas id="pdf-canvas" class="w-full mb-4"></canvas>
+  
+      <div class="modal-action">
+        <button class="btn btn-error" (click)="cerrar()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  

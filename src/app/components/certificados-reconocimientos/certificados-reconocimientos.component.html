@@ -1,35 +1,36 @@
-<!-- Certificados Section -->
 <section class="certificados-section py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Certificados</h2>
-  
-      <!-- Loading Indicator -->
-      <div *ngIf="isLoading" class="text-center text-gray-600">
-        <p>Cargando certificados...</p>
-      </div>
-  
-      <!-- Error Message -->
-      <div *ngIf="errorMessage" class="text-center text-red-500">
-        <p>{{ errorMessage }}</p>
-      </div>
-  
-      <!-- Certificados Grid -->
-      <div *ngIf="!isLoading && !errorMessage" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div *ngFor="let certificado of certificados" class="relative p-4 bg-white border border-gray-200 rounded-lg shadow-md">
-          <!-- Certificate Image -->
-          <img [src]="certificado.imageUrl" alt="Certificate Image" class="w-full h-auto mb-4 rounded-lg">
-          
-          <!-- Certificate Name -->
-          <h3 class="text-lg font-semibold text-center">{{ certificado.nombre }}</h3>
-          
-          <!-- Link to Full PDF -->
-          <div class="text-center mt-4">
-            <a [href]="certificado.pdfUrl" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">
-              Ver PDF Completo
-            </a>
-          </div>
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Certificados</h2>
+
+    <!-- Loading Indicator -->
+    <div *ngIf="isLoading" class="text-center text-gray-600">
+      <p>Cargando certificados...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="text-center text-red-500">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <!-- Certificados Grid -->
+    <div *ngIf="!isLoading && !errorMessage" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let certificado of certificados" class="relative p-4 bg-white border border-gray-200 rounded-lg shadow-md">
+        <!-- Certificate Image -->
+        <img [src]="certificado.imageUrl" alt="Certificate Image" class="w-full h-auto mb-4 rounded-lg">
+        
+        <!-- Certificate Name -->
+        <h3 class="text-lg font-semibold text-center">{{ certificado.nombre }}</h3>
+        
+        <!-- Link to Full PDF -->
+        <div class="text-center mt-4">
+          <a target="_blank" rel="noopener noreferrer" class="btn btn-primary text-blue-500 hover:underline" (click)="abrirModal(certificado.pdfUrl)">
+            Ver PDF Completo
+          </a>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+
+  <!-- Modal -->
+  <app-crpdf-modal *ngIf="mostrarModal" [pdfUrl]="pdfUrlSeleccionado" (cerrarModal)="cerrarModal()"></app-crpdf-modal>
+</section>
