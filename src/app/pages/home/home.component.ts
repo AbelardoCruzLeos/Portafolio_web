@@ -4,11 +4,12 @@ import { GithubService } from '../../services/github.service';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { HabilidadesComponent } from '../../components/habilidades/habilidades.component';
-import { DomSanitizer } from '@angular/platform-browser'; // Import para sanitizar URLs
+import { DomSanitizer } from '@angular/platform-browser';
+import { CertificadosReconocimientosComponent } from "../../components/certificados-reconocimientos/certificados-reconocimientos.component"; // Import para sanitizar URLs
 
 @Component({
   standalone: true,
-  imports: [CommonModule, TranslateModule, HabilidadesComponent],
+  imports: [CommonModule, TranslateModule, HabilidadesComponent, CertificadosReconocimientosComponent],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -27,8 +28,6 @@ export class HomeComponent implements OnInit {
   TotalPages: number = 0;
   private reposLoaded: boolean = false;
 
-  certificados: any[] = [];
-
   constructor(
     private proyectosService: ProyectosService,
     private githubService: GithubService,
@@ -39,7 +38,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.cargarProyectos();
     this.cargarRepositorios();
-    this.cargarCertificados(); // Cargar certificados al iniciar
   }
 
   cargarProyectos(): void {
@@ -134,17 +132,5 @@ export class HomeComponent implements OnInit {
       default:
         return 'URL_DEL_ICONO_POR_DEFECTO'; // URL de un icono por defecto si el lenguaje no tiene un icono específico
     }
-  }
-
-  // Función para cargar certificados
-  cargarCertificados(): void {
-    this.certificados = [
-      {
-        nombre: 'Build an app with ASPNET Core and Angular from scratch',
-        imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-2d4fc0d1-c8d0-4cc9-9d45-48a4c7ffde32.jpg',  // Link to the image
-        pdfUrl: this.sanitizer.bypassSecurityTrustResourceUrl('https://udemy-certificate.s3.amazonaws.com/pdf/UC-2d4fc0d1-c8d0-4cc9-9d45-48a4c7ffde32.pdf')  // Link to the full PDF
-      }
-      // Add more certificates here if needed
-    ];
   }
 }

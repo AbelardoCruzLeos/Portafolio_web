@@ -35,23 +35,14 @@
     <div class="separador"></div>
   </section>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <div class="profile-container">
   <!-- Otros contenidos del perfil -->
   
   <app-habilidades></app-habilidades>
   
   <!-- Otros contenidos del perfil -->
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <section class="text-center mb-4">
   <div class="flex justify-center flex-wrap space-x-2">
     <button class="btn btn-primary mx-2 mb-2 shadow-md ring-4 ring-pink-300 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="cambiarSeccion('proyectos')">
@@ -148,23 +139,7 @@
   </div>
 </section>
 
-  <!-- Certificados Section -->
-  <section class="certificados-section py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Certificados</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div *ngFor="let certificado of certificados" class="relative p-4 bg-white border border-gray-200 rounded-lg shadow-md">
-          <!-- Display certificate image instead of PDF -->
-          <img [src]="certificado.imageUrl" alt="Certificate Image" class="w-full h-auto mb-4 rounded-lg">
-          <h3 class="text-lg font-semibold text-center">{{ certificado.nombre }}</h3>
-          <div class="text-center mt-4">
-            <!-- Link to view full PDF -->
-            <a [href]="certificado.pdfUrl" target="_blank" class="text-blue-500 hover:underline">
-              Ver PDF Completo
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+<!-- Certificados y reconocimientos Section -->
+<app-certificados-reconocimientos></app-certificados-reconocimientos>
+<!-- Certificados y reconocimientos Section -->
