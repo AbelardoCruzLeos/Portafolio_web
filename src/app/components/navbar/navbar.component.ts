@@ -13,6 +13,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class NavbarComponent {
   dropdownOpen = false;
   currentLang: string;
+  isDarkMode = false;
 
   languages = [
     { code: 'en', label: 'NAVBAR.ENGLISH' },
@@ -22,8 +23,27 @@ export class NavbarComponent {
     { code: 'zh', label: 'NAVBAR.CHINESE' }
   ];
 
+
+
+
   constructor(private translate: TranslateService) {
     this.currentLang = this.translate.currentLang || 'en';
+  }
+
+  ngOnInit() {
+    // Detectar tema actual desde <html>
+    this.isDarkMode = document.documentElement.classList.contains('dark');
+
+    const theme = localStorage.getItem('theme');
+    this.isDarkMode = theme === 'dark';
+    document.documentElement.classList.toggle('dark', this.isDarkMode);
+  }
+
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    document.documentElement.classList.toggle('dark', this.isDarkMode);
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
   }
 
   toggleDropdown() {
