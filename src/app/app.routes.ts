@@ -1,15 +1,29 @@
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { GamesComponent } from './pages/games/games.component';
-import { AcercadeComponent } from './pages/acercade/acercade.component';
-import { ContactameComponent } from './pages/contactame/contactame.component';
-import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'inicio', component: HomeComponent },
-  { path: 'juegos', component: GamesComponent },
-  { path: 'acercade', component: AcercadeComponent },
-  { path: 'contactame', component: ContactameComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'inicio',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'juegos',
+    loadComponent: () => import('./pages/games/games.component').then(m => m.GamesComponent)
+  },
+  {
+    path: 'acercade',
+    loadComponent: () => import('./pages/acercade/acercade.component').then(m => m.AcercadeComponent)
+  },
+  {
+    path: 'contactame',
+    loadComponent: () => import('./pages/contactame/contactame.component').then(m => m.ContactameComponent)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
