@@ -1,23 +1,53 @@
-<div class="modal-overlay">
-    <div class="modal-content">
-      <button class="close-button" (click)="closeModal()">×</button>
-      <div class="game-container">
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-        <div *ngIf="gameStarted" class="score">Score: {{ score }}</div>
-        <div *ngIf="!gameStarted" class="start-container">
-          <input type="text" [(ngModel)]="playerName" placeholder="Enter your name" class="name-input" />
-          <button (click)="startGame()" class="game-button">Play</button>
-        </div>
-        <button *ngIf="gameStarted" (click)="resetGame()" class="game-button">Volver a jugar</button>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+  <div class="relative w-full max-w-md p-6 bg-white rounded-2xl shadow-2xl">
+    <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+      ×
+    </button>
+
+    <div class="flex flex-col items-center space-y-4">
+      <canvas id="gameCanvas" width="400" height="400" class="border border-gray-300 rounded-lg shadow-sm"></canvas>
+
+      <div *ngIf="gameStarted" class="text-xl font-semibold text-blue-700">Score: {{ score }}</div>
+
+      <div *ngIf="!gameStarted" class="w-full flex flex-col items-center space-y-3">
+        <input
+          type="text"
+          [(ngModel)]="playerName"
+          placeholder="Ingresa tu nombre"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+        />
+        <button
+          (click)="startGame()"
+          class="w-full px-4 py-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+        >
+          Jugar
+        </button>
       </div>
-    </div>
-  
-    <div *ngIf="gameOver" class="game-over-alert">
-      <div class="game-over-content">
-        <p>Game Over, {{ playerName }}</p>
-        <p>Score: {{ score }}</p>
-        <button (click)="resetGame()" class="game-button">Volver a jugar</button>
-      </div>
+
+      <button
+        *ngIf="gameStarted"
+        (click)="resetGame()"
+        class="w-full px-4 py-2 mt-4 font-semibold text-white bg-green-600 rounded-lg hover:bg-green-700 transition"
+      >
+        Volver a jugar
+      </button>
     </div>
   </div>
-  
+
+  <!-- GAME OVER MODAL -->
+  <div
+    *ngIf="gameOver"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60"
+  >
+    <div class="bg-white rounded-2xl p-6 text-center shadow-2xl space-y-4 w-full max-w-sm">
+      <p class="text-xl font-semibold text-red-600">¡Game Over, {{ playerName }}!</p>
+      <p class="text-lg text-gray-700">Puntaje: {{ score }}</p>
+      <button
+        (click)="resetGame()"
+        class="w-full px-4 py-2 mt-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+      >
+        Volver a jugar
+      </button>
+    </div>
+  </div>
+</div>

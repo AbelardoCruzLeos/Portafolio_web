@@ -1,22 +1,26 @@
-<div class="games-container">
-    <h2 class="section-title">{{ 'PROFILE.GAMES' | translate }}</h2>
-    <div class="games-list">
-      <div class="game-card" *ngFor="let game of games">
-        <img [src]="game.image" alt="{{ game.name }}" class="game-image">
-        <div class="game-details">
-          <h3 class="game-name">{{ game.name }}</h3>
-          <p class="game-description">{{ game.description }}</p>
-          <button (click)="openGame(game)" class="play-button">Jugar</button>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 ">
+  <div class="w-full max-w-4xl px-4 games-container">
+    <h2 class="text-3xl font-bold text-center mb-8 section-title">{{ 'GAMES.GAMES' | translate }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div *ngFor="let game of games" class="bg-white rounded-lg shadow-md overflow-hidden game-card">
+        <img [src]="game.image" alt="{{ game.name }}" class="w-full h-48 object-cover game-image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2 game-name">{{ game.name }}</h3>
+          <p class="text-sm text-gray-600 mb-4 game-description">{{ game.description }}</p>
+          <button (click)="openGame(game)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Jugar</button>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal -->
-  <div *ngIf="currentGame && currentGame.name === 'La Vibora'" class="modal-overlay">
-    <div class="modal-content">
-      <app-vibora (close)="closeModal()"></app-vibora>
-      <button (click)="closeModal()" class="game-button">Cerrar</button>
-    </div>
+</div>
+
+<!-- Modal -->
+<div *ngIf="currentGame && currentGame.name === 'La Vibora'" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+  <div class="relative w-full max-w-2xl mx-4 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl transition-all transform scale-100 animate-fadeIn">
+    
+    <!-- Contenido del componente del juego -->
+    <app-vibora (close)="closeModal()"></app-vibora>
+    
   </div>
-  
+</div>
+

@@ -29,7 +29,9 @@ export class ViboraComponent implements AfterViewInit {
     this.canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.generateFood();
-    document.addEventListener('keydown', this.changeDirection.bind(this));
+
+    // Usa capture=true para interceptar antes del scroll
+    document.addEventListener('keydown', this.changeDirection.bind(this), true);
   }
 
   startGame() {
@@ -110,7 +112,16 @@ export class ViboraComponent implements AfterViewInit {
   }
 
   changeDirection(event: KeyboardEvent) {
+    if (!this.gameStarted) return;
+
+    // Previene el scroll con las flechas
+    const arrowKeys = [37, 38, 39, 40];
+    if (arrowKeys.includes(event.keyCode)) {
+      event.preventDefault();
+    }
+
     if (this.changingDirection) return;
+
     this.changingDirection = true;
     const keyPressed = event.keyCode;
     const goingUp = this.dy === -10;
@@ -118,23 +129,24 @@ export class ViboraComponent implements AfterViewInit {
     const goingRight = this.dx === 10;
     const goingLeft = this.dx === -10;
 
-    if (keyPressed === 37 && !goingRight) { // left arrow key
+    if (keyPressed === 37 && !goingRight) {
       this.dx = -10;
       this.dy = 0;
     }
-    if (keyPressed === 38 && !goingDown) { // up arrow key
+    if (keyPressed === 38 && !goingDown) {
       this.dx = 0;
       this.dy = -10;
     }
-    if (keyPressed === 39 && !goingLeft) { // right arrow key
+    if (keyPressed === 39 && !goingLeft) {
       this.dx = 10;
       this.dy = 0;
     }
-    if (keyPressed === 40 && !goingUp) { // down arrow key
+    if (keyPressed === 40 && !goingUp) {
       this.dx = 0;
       this.dy = 10;
     }
   }
+
 
   didGameEnd() {
     for (let i = 4; i < this.snake.length; i++) {

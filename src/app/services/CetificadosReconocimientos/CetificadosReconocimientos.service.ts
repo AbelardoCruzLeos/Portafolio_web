@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CertificadosReconocimientosService {
-  private readonly baseUrl = 'https://apiportafolioweb-production.up.railway.app/certificados'; // URL de la API
+  private readonly baseUrl = 'https://api.abelardocruzleos.dev/certificados'; // URL de la API
 
   constructor(private httpClient: HttpClient) {}
 

@@ -26,6 +26,7 @@
   canvas {
     border: 1px solid #000;
     margin-bottom: 20px;
+     @apply border border-gray-300 rounded-lg shadow;
   }
   
   .score {
@@ -68,3 +69,5 @@
     @apply bg-white p-6 rounded-lg shadow-lg text-center;
   }
   
+
+ 

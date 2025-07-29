@@ -3,41 +3,52 @@
 @import 'tailwindcss/utilities';
 
 .selected-language {
-    color: red !important; // Cambia este color según tus preferencias
-    font-weight: bold;
-  }
-  
+  color: red !important; // Cambia este color según tus preferencias
+  font-weight: bold;
+}
 
-  .active {
-    color: red !important;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%; /* This ensures the dropdown is displayed just below the button */
-    left: 0;
-    z-index: 1000;
-    display: block;
-    width: 100%;
-    float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.175);
-  }
-  .dropdown-menu {
-    top: 100%;
-    left: 0;
-  }
-  .selected-language {
-    font-weight: bold;
-  }
-  
+nav {
+  user-select: none;
+  -webkit-user-select: none;
+  /* para Safari */
+  -moz-user-select: none;
+  /* para Firefox */
+  -ms-user-select: none;
+  /* para IE10+ */
+}
+
+.active {
+  color: red !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* This ensures the dropdown is displayed just below the button */
+  left: 0;
+  z-index: 1000;
+  display: block;
+  width: 100%;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .175);
+}
+
+.dropdown-menu {
+  top: 100%;
+  left: 0;
+}
+
+.selected-language {
+  font-weight: bold;
+}

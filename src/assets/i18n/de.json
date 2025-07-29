@@ -51,5 +51,11 @@
     "PRIVACY_POLICY": "Datenschutz-Bestimmungen",
     "TERMS_CONDITIONS": "Geschäftsbedingungen",
     "ALL_RIGHTS_RESERVED": "Alle Rechte vorbehalten"
+  },
+  "GAMES": {
+    "GAMES" : "Spiele"
+  },
+  "ABOUTME": {
+    "TITLE": "Über mich"
   }
 }

@@ -67,7 +67,7 @@ export class CRPdfModalComponent implements OnChanges, AfterViewInit {
       this.pdf = pdfDoc;
       this.loading = false;
       this.renderizarPagina(this.pageNum);
-    }).catch((error) => {
+    }).catch((error: any) => {
       console.error("Error al cargar el PDF", error);
       this.loading = false;
     });

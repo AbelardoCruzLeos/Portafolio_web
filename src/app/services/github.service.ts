@@ -15,7 +15,7 @@ export class GithubService {
       'Content-Type': 'application/json',
     });
 
-    return this.http.get<any[]>(`${this.apiUrl}/users/Umblum12/repos`, {
+    return this.http.get<any[]>(`${this.apiUrl}/users/abelardocruzleos/repos`, {
       headers,
     });
   }

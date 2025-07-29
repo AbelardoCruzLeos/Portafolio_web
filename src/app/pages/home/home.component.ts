@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
 
   cargarProyectos(): void {
     this.proyectosService
-      .getProyects('https://apiportafolioweb-production.up.railway.app/proyectos', { page: 0, perPage: 10 })
+      .getProyects('https://api.abelardocruzleos.dev/proyectos', { page: 0, perPage: 10 })
       .subscribe(
         (proyectos: any) => {
           this.proyectos = proyectos.map((proyecto: any) => ({

@@ -22,7 +22,7 @@
     "LANGUAGE": "Idioma",
       "SKILLS": "Habilidades",
     "STRENGTHS": "Fortalezas"
-  },
+  },  
   "BUTTONS": {
     "PROJECTS": "Proyectos",
     "REPOSITORIES": "Repositorios",
@@ -53,5 +53,11 @@
     "PRIVACY_POLICY": "Política de Privacidad",
     "TERMS_CONDITIONS": "Términos y Condiciones",
     "ALL_RIGHTS_RESERVED": "Todos los derechos reservados"
+  },
+  "GAMES": {
+    "GAMES" : "Juegos"
+  },
+  "ABOUTME": {
+    "TITLE": "Sobre Mí"
   }
 }
