@@ -1,0 +1,39 @@
+<div class="fixed end-6 bottom-6 z-50">
+  <div
+    class="flex flex-col items-center mb-4 space-y-2 transition-all duration-500"
+    [class.opacity-0]="!menuOpen"
+    [class.translate-y-4]="!menuOpen"
+    [class.translate-y-0]="menuOpen"
+    [class.scale-100]="menuOpen"
+    [class.scale-90]="!menuOpen"
+    [class.pointer-events-none]="!menuOpen"
+  >
+    <!-- Ejemplo de botones secundarios -->
+    <button class="speed-dial-button">🔗</button>
+    <button class="speed-dial-button">🖨️</button>
+    <button class="speed-dial-button">⬇️</button>
+    <button class="speed-dial-button">📋</button>
+  </div>
+
+  <!-- Botón flotante -->
+  <button
+    (click)="toggleMenu()"
+    class="main-dial-button group"
+    [class.rotate-45]="menuOpen"
+  >
+    <svg
+      class="w-5 h-5 transition-transform duration-300 group-hover:rotate-90"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 18 18"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 1v16M1 9h16"
+      />
+    </svg>
+  </button>
+</div>
